@@ -29,6 +29,7 @@ namespace Cw11
         {
             services.AddDbContext<PharmacyDbContext>(opt => opt.UseSqlServer("Data Source=db-mssql;Initial Catalog=s17717;Integrated Security=True"));
             services.AddTransient<ISeedDbService, EfSeedDbService>();
+            services.AddTransient<IDoctorsDbService, EfDoctorsDbService>();
             services.AddControllers();
         }
 
